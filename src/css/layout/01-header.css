@@ -1,0 +1,27 @@
+#title1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+#title1.changed {
+  color: #0070f3;
+}
+
+#action-btn1 {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  background-color: #0070f3;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+#action-btn1:hover {
+  background-color: #005bb5;
+}
