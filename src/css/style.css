@@ -1,5 +1,6 @@
 @import url("./base/fonts.css");
 @import url("./base/variables.css");
+@import url("./base/reset.css");
 
 @import url("./layout/01-header.css");
 @import url("./layout/02-hero.css");
