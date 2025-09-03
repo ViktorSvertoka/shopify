@@ -1,6 +1,10 @@
+@import "modern-normalize/modern-normalize.css";
+
 @import url("./base/fonts.css");
 @import url("./base/variables.css");
 @import url("./base/reset.css");
+
+@import url("./components/button.css");
 
 @import url("./layout/01-header.css");
 @import url("./layout/02-hero.css");
