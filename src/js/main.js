@@ -1,3 +1,4 @@
 import "./01-hero";
 import "./02-featured";
-import "./03-footer";
+import "./03-questions";
+import "./06-footer";
