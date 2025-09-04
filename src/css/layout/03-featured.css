@@ -4,10 +4,8 @@
   line-height: 1.2;
   text-align: center;
   margin-bottom: 32px;
-}
 
-@media (min-width: 768px) {
-  .featured__title {
+  @media (min-width: 768px) {
     font-size: 30px;
     margin-bottom: 48px;
   }
@@ -17,16 +15,12 @@
   position: relative;
   width: 359px;
   margin: 0 auto;
-}
 
-@media (min-width: 768px) {
-  .featured__wrapper {
+  @media (min-width: 768px) {
     width: 768px;
   }
-}
 
-@media (min-width: 1280px) {
-  .featured__wrapper {
+  @media (min-width: 1280px) {
     width: 1440px;
   }
 }
@@ -35,16 +29,12 @@
   margin: 0 auto;
   overflow: hidden;
   width: 100%;
-}
 
-@media (min-width: 768px) {
-  .featured__swiper {
+  @media (min-width: 768px) {
     width: 768px;
   }
-}
 
-@media (min-width: 1280px) {
-  .featured__swiper {
+  @media (min-width: 1280px) {
     width: 1320px;
   }
 }
@@ -57,24 +47,18 @@
   height: auto;
   display: flex;
   flex-direction: column;
-}
 
-@media (max-width: 767px) {
-  .featured__card {
+  @media (max-width: 767px) {
     width: calc(100vw - 100px);
     min-width: 280px;
     max-width: 290px;
   }
-}
 
-@media (min-width: 768px) {
-  .featured__card {
+  @media (min-width: 768px) {
     width: 294px;
   }
-}
 
-@media (min-width: 1280px) {
-  .featured__card {
+  @media (min-width: 1280px) {
     width: 312px;
   }
 }
@@ -98,10 +82,8 @@
   height: 100%;
   object-fit: cover;
   display: block;
-}
 
-@media (max-width: 767px) {
-  .featured__image {
+  @media (max-width: 767px) {
     height: calc(100vw - 100px);
     min-height: 280px;
     max-height: 290px;
@@ -136,42 +118,32 @@
     background-color: var(--color-gray-light);
     border-color: var(--color-gray-light);
   }
-}
 
-@media (min-width: 768px) {
-  .featured__button {
+  @media (min-width: 768px) {
     display: flex;
   }
 }
 
 .featured__button--prev {
   left: 2.8%;
-}
 
-@media (min-width: 768px) {
-  .featured__button--prev {
+  @media (min-width: 768px) {
     left: -2.8%;
   }
-}
 
-@media (min-width: 1280px) {
-  .featured__button--prev {
+  @media (min-width: 1280px) {
     left: 2.8%;
   }
 }
 
 .featured__button--next {
   right: 2.8%;
-}
 
-@media (min-width: 768px) {
-  .featured__button--next {
+  @media (min-width: 768px) {
     right: -2.8%;
   }
-}
 
-@media (min-width: 1280px) {
-  .featured__button--next {
+  @media (min-width: 1280px) {
     right: 2.8%;
   }
 }
