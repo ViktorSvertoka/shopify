@@ -8,7 +8,7 @@ document.querySelectorAll('.questions__details').forEach(details => {
 
   summary.addEventListener('click', () => {
     setTimeout(() => {
-      const current = useTag.getAttribute('href');
+      useTag.getAttribute('href');
       if (details.open) {
         useTag.setAttribute('href', `${spriteUrl}#minus`);
       } else {
