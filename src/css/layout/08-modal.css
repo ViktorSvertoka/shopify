@@ -1,0 +1,153 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.modal__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+}
+
+.modal__wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 872px;
+  width: calc(100% - 32px);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px var(--box-shadow);
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+    width: calc(100% - 16px);
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  border: 1px solid var(--color-stroke);
+}
+
+.modal__icon {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 42px;
+  height: 42px;
+  transform: rotate(45deg);
+}
+
+.modal__content {
+  max-width: 520px;
+  padding: 60px;
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+    padding: 24px;
+  }
+}
+
+.modal__title {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 30px 0 16px 0;
+
+  @media (min-width: 768px) {
+    font-size: 48px;
+    line-height: 1;
+  }
+}
+
+.modal__description {
+  margin-bottom: 48px;
+}
+
+.modal__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal__label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal__input {
+  width: 100%;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-stroke);
+  border-radius: 8px;
+  padding: 16px;
+
+  &::placeholder {
+    color: var(--color-gray);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-dark);
+  }
+}
+
+.modal__button {
+  margin: 8px 0 0;
+  width: 100%;
+  color: var(--color-white);
+  background-color: var(--color-dark);
+}
+
+.modal__wrap {
+  max-width: 352px;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.modal__image {
+  height: 100%;
+  object-fit: cover;
+}
+
+body.modal__open {
+  overflow: hidden;
+}
+
+.modal__show {
+  z-index: 1000;
+  opacity: 1;
+}

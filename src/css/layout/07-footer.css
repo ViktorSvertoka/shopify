@@ -71,6 +71,7 @@
   @media (min-width: 1280px) {
     cursor: default;
     pointer-events: none;
+    padding: 16px 0 0 0;
   }
 }
 
