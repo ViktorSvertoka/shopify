@@ -1,51 +1,49 @@
-import Swiper from "swiper";
-import { Pagination, Autoplay } from "swiper/modules";
+import Swiper from 'swiper';
+import { Pagination, Autoplay } from 'swiper/modules';
 
-const heroSliderSettings = {
-  direction: "horizontal",
+const heroSliderConfig = {
+  direction: 'horizontal',
   speed: 3000,
   autoplay: {
     delay: 9000,
     disableOnInteraction: false,
   },
+  slidesPerView: 1,
+  loop: false,
+  spaceBetween: 0,
+  init: false,
+  pagination: {
+    el: '.hero__pagination',
+    clickable: true,
+    type: 'bullets',
+    bulletClass: 'swiper-pagination-bullet',
+    bulletActiveClass: 'swiper-pagination-bullet-active',
+  },
+  observer: true,
+  observeParents: true,
 };
 
-function initSwiper() {
-  const swiperContainer = document.querySelector(".hero__slider");
+const resetToFirstSlide = swiper => {
+  setTimeout(() => {
+    swiper.slideTo(0, swiper.params.speed);
+  }, swiper.params.autoplay.delay);
+};
 
-  if (!swiperContainer) return;
+const initHeroSlider = () => {
+  const container = document.querySelector('.hero__slider');
+  if (!container) return;
 
-  const heroSwiper = new Swiper(".hero__slider", {
+  const heroSwiper = new Swiper(container, {
     modules: [Pagination, Autoplay],
-    ...heroSliderSettings,
-    slidesPerView: 1,
-    loop: false,
-    spaceBetween: 0,
-    init: false,
-
-    pagination: {
-      el: ".hero__pagination",
-      clickable: true,
-      type: "bullets",
-      bulletClass: "swiper-pagination-bullet",
-      bulletActiveClass: "swiper-pagination-bullet-active",
-    },
-
-    observer: true,
-    observeParents: true,
-
+    ...heroSliderConfig,
     on: {
-      slideChange: function () {
+      slideChange() {
         if (this.activeIndex === this.slides.length - 1) {
-          setTimeout(() => {
-            this.slideTo(0, this.params.speed);
-          }, this.params.autoplay.delay);
+          resetToFirstSlide(this);
         }
       },
-      reachEnd: function () {
-        setTimeout(() => {
-          this.slideTo(0, this.params.speed);
-        }, this.params.autoplay.delay);
+      reachEnd() {
+        resetToFirstSlide(this);
       },
     },
   });
@@ -56,14 +54,14 @@ function initSwiper() {
   }, 100);
 
   window.heroSwiper = heroSwiper;
-}
+};
 
-function runInit() {
-  setTimeout(initSwiper, 200);
-}
+const bootstrapHeroSlider = () => {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHeroSlider);
+  } else {
+    initHeroSlider();
+  }
+};
 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", runInit);
-} else {
-  runInit();
-}
+bootstrapHeroSlider();
