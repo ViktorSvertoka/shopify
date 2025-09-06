@@ -1,0 +1,41 @@
+<div class="modal">
+  <div class="modal__backdrop"></div>
+  <div class="modal__wrapper">
+    <button class="modal__close" type="button" aria-label="Close modal">
+      <svg class="modal__icon">
+        <use href="/icons/sprite.svg#plus"></use>
+      </svg>
+    </button>
+    <div class="modal__content">
+      <h2 class="modal__title">Here's $10 Off Your First Order!</h2>
+      <p class="modal__description">
+        Join our newsletter and get a $10 discount code sent straight to your
+        inbox. New customers only.
+      </p>
+      <form class="modal__form">
+        <label class="modal__label">
+          Email
+          <input
+            class="modal__input"
+            type="email"
+            name="email"
+            placeholder="Enter email"
+            required
+          />
+        </label>
+        <button class="modal__button button" type="submit">Send</button>
+      </form>
+    </div>
+    <div class="modal__wrap">
+      <img
+        class="modal__image"
+        src="/images/components/modal/modal.webp"
+        srcset="
+          /images/components/modal/modal.webp    1x,
+          /images/components/modal/modal@2x.webp 2x
+        "
+        alt="Nike sneakers"
+      />
+    </div>
+  </div>
+</div>

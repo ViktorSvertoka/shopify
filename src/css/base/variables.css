@@ -7,6 +7,9 @@
   --color-gray-light: #cacacb;
   --color-gray-extra-light: #f5f5f5;
   --color-stroke: #ebebeb;
+
+  --bg-color: rgba(17, 17, 17, 0.5);
+  --box-shadow: rgba(0, 0, 0, 0.1);
 }
 
 html {
