@@ -84,4 +84,8 @@
   color: var(--color-white);
   background-color: var(--color-dark);
   margin: 8px auto 0 auto;
+
+  &:hover {
+    background-color: var(--color-gray);
+  }
 }
