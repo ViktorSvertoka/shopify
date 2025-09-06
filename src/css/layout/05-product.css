@@ -276,6 +276,10 @@
   @media (min-width: 768px) {
     margin-bottom: 32px;
   }
+
+  &:hover {
+    background-color: var(--color-gray);
+  }
 }
 
 .product__sizes-desc {
