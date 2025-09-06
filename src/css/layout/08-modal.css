@@ -126,6 +126,10 @@
   width: 100%;
   color: var(--color-white);
   background-color: var(--color-dark);
+
+  &:hover {
+    background-color: var(--color-gray);
+  }
 }
 
 .modal__wrap {
